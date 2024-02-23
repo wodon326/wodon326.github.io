@@ -17,8 +17,8 @@ avatar: /images/마상균.JPG
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email: wodon326@naver.com
+  dribbble: 
+  email: wodon326@dgist.ac.kr
   facebook:
   flickr:
   github: https://github.com/wodon326
@@ -26,10 +26,11 @@ footer-links:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
+  googlescholar : https://scholar.google.com/citations?user=ecFPrKIAAAAJ&hl=ko&oi=ao
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
