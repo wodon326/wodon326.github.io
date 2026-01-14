@@ -10,15 +10,19 @@ const classes = {
   contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
   name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
+  contact: 'mt-4 text-sm text-gray-600',
+  contactTitle: 'mb-1 text-xs uppercase tracking-wider text-gray-500',
   list: 'mt-6 uppercase tracking-wider',
   item: 'inline list-none pr-4',
   link: 'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black',
 };
 
-const Header = ({ metadata = {}, noBlog = false }) => {
-  const twitter = get(metadata, 'author', false);
+const Header = ({ metadata = {} }) => {
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
+  const email = get(metadata, 'email', false);
+  const phone = get(metadata, 'phone', false);
+  const portfolioPdf = get(metadata, 'portfolioPdf', false);
 
   return (
     <div className={classes.wrapper}>
@@ -26,7 +30,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         <Link to="/">
           <StaticImage
             className={classes.image}
-            src="../../images/profile.jpg"
+            src="../../images/마상균.jpg"
             alt={metadata.name}
             placeholder="dominantColor"
             layout="fullWidth"
@@ -39,16 +43,6 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         </h1>
         <p className={classes.description}>{metadata.description}</p>
         <ul className={classes.list}>
-          {twitter && (
-            <li className={classes.item}>
-              <a
-                className={classes.link}
-                href={`https://twitter.com/${twitter}`}
-              >
-                Twitter
-              </a>
-            </li>
-          )}
           {github && (
             <li className={classes.item}>
               <a className={classes.link} href={github}>
@@ -63,14 +57,33 @@ const Header = ({ metadata = {}, noBlog = false }) => {
               </a>
             </li>
           )}
-          {!noBlog && (
+          {portfolioPdf && (
             <li className={classes.item}>
-              <Link className={classes.link} to="/blog">
-                Blog
-              </Link>
+              <a className={classes.link} href={portfolioPdf} download>
+                Portfolio PDF
+              </a>
             </li>
           )}
         </ul>
+        {(email || phone) && (
+          <div className={classes.contact}>
+            <div className={classes.contactTitle}>Contact</div>
+            {email && (
+              <div>
+                <a className="hover:text-black" href={`mailto:${email}`}>
+                  {email}
+                </a>
+              </div>
+            )}
+            {phone && (
+              <div>
+                <a className="hover:text-black" href={`tel:${phone}`}>
+                  {phone}
+                </a>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

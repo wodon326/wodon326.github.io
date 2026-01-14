@@ -4,7 +4,7 @@ import React from 'react';
 const classes = {
   wrapper: 'mb-6',
   name: 'font-semibold text-gray-900 pb-1',
-  description: 'text-md text-gray-600 font-light',
+  description: 'text-md text-gray-600 font-light whitespace-pre-line',
 };
 
 const SummaryItem = ({ name, description, link = false, internal = false }) => {
