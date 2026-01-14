@@ -33,10 +33,10 @@ const Index = ({ data }) => {
         <SectionEducation education={education} />
       )}
       {research && research.length && <SectionResearch research={research} />}
+      {projects && projects.length && <SectionProjects projects={projects} />}
       {publications && publications.length && (
         <SectionPublications publications={publications} />
       )}
-      {projects && projects.length && <SectionProjects projects={projects} />}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
       )}
