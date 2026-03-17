@@ -112,7 +112,7 @@ module.exports = {
       {
         name: 'Robot',
         description:
-          '- 한국전자기술연구원 KETI\n- LLM/VLM 기반 물류로봇 자율주행 시스템\n- LiDAR-IMU 기반 SLAM 매핑 및 자율주행 시스템\n- 강화학습 기반 로봇팔 핀-홀 정밀 삽입 시스템\n- 강화학습 기반 AMR 물류로봇 자율주행 시스템',
+          '한국전자기술연구원 KETI\n- LLM/VLM 기반 물류로봇 자율주행 시스템\n- LiDAR-IMU 기반 SLAM 매핑 및 자율주행 시스템\n 개인 프로젝트\n- 강화학습 기반 로봇팔 핀-홀 정밀 삽입 시스템\n- 강화학습 기반 AMR 물류로봇 자율주행 시스템',
         link: '',
       },
       {

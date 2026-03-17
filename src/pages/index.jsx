@@ -10,7 +10,6 @@ import SectionEducation from '../components/section-education';
 import SectionExperience from '../components/section-experience';
 import SectionOther from '../components/section-other';
 import SectionPublications from '../components/section-publications';
-import SectionProjects from '../components/section-projects';
 import SectionResearch from '../components/section-research';
 import SectionSkills from '../components/section-skills';
 import SEO from '../components/seo';
@@ -19,7 +18,6 @@ const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
   const research = get(data, 'site.siteMetadata.research', false);
   const publications = get(data, 'site.siteMetadata.publications', false);
-  const projects = get(data, 'site.siteMetadata.projects', false);
   const experience = get(data, 'site.siteMetadata.experience', false);
   const education = get(data, 'site.siteMetadata.education', false);
   const awards = get(data, 'site.siteMetadata.awards', false);
@@ -38,7 +36,6 @@ const Index = ({ data }) => {
         <SectionExperience experience={experience} />
       )}
       {research && research.length && <SectionResearch research={research} />}
-      {projects && projects.length && <SectionProjects projects={projects} />}
       {publications && publications.length && (
         <SectionPublications publications={publications} />
       )}
@@ -75,11 +72,6 @@ export const pageQuery = graphql`
           link
         }
         publications {
-          name
-          description
-          link
-        }
-        projects {
           name
           description
           link

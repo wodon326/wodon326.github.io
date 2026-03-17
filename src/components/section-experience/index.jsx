@@ -10,16 +10,24 @@ const SectionExperience = ({ experience }) => {
       {experience.map((item) => (
         <div key={item.name} className="mb-6">
           <h3 className="pb-1 font-semibold text-gray-900">{item.name}</h3>
-          <ul className="space-y-1 pl-5 text-md font-light text-gray-600 list-disc">
+          <ul className="space-y-1 text-md font-light text-gray-600">
             {item.description
               .split('\n')
-              .map((line) => line.trim())
-              .filter(Boolean)
-              .map((line) => (
-                <li key={`${item.name}-${line}`}>
-                  {line.replace(/^[-•]\s*/, '')}
-                </li>
-              ))}
+              .map((line) => line.replace(/\s+$/, ''))
+              .filter((line) => line.trim())
+              .map((line) => {
+                const indent = line.match(/^\s*/)?.[0].length || 0;
+                const levelClass = indent >= 2 ? 'pl-10' : 'pl-5';
+
+                return (
+                  <li
+                    key={`${item.name}-${line}`}
+                    className={`list-disc ${levelClass}`}
+                  >
+                    {line.trim().replace(/^[-•]\s*/, '')}
+                  </li>
+                );
+              })}
           </ul>
         </div>
       ))}
