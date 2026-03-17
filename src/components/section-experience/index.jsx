@@ -10,7 +10,7 @@ const SectionExperience = ({ experience }) => {
       {experience.map((item) => (
         <div key={item.name} className="mb-6">
           <h3 className="pb-1 font-semibold text-gray-900">{item.name}</h3>
-          <ul className="space-y-1 text-md font-light text-gray-600">
+          <div className="space-y-1 text-md font-light text-gray-600">
             {item.description
               .split('\n')
               .map((line) => line.replace(/\s+$/, ''))
@@ -20,15 +20,16 @@ const SectionExperience = ({ experience }) => {
                 const levelClass = indent >= 2 ? 'pl-10' : 'pl-5';
 
                 return (
-                  <li
+                  <div
                     key={`${item.name}-${line}`}
-                    className={`list-disc ${levelClass}`}
+                    className={`flex items-start gap-2 ${levelClass}`}
                   >
-                    {line.trim().replace(/^[-•]\s*/, '')}
-                  </li>
+                    <span className="leading-6">•</span>
+                    <span>{line.trim().replace(/^[-•]\s*/, '')}</span>
+                  </div>
                 );
               })}
-          </ul>
+          </div>
         </div>
       ))}
     </Section>
