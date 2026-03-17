@@ -38,6 +38,7 @@ const Index = ({ data }) => {
         <SectionExperience experience={experience} />
       )}
       {research && research.length && <SectionResearch research={research} />}
+      {projects && projects.length && <SectionProjects projects={projects} />}
       {publications && publications.length && (
         <SectionPublications publications={publications} />
       )}
