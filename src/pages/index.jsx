@@ -8,6 +8,7 @@ import SectionAbout from '../components/section-about';
 import SectionAwards from '../components/section-awards';
 import SectionEducation from '../components/section-education';
 import SectionExperience from '../components/section-experience';
+import SectionOther from '../components/section-other';
 import SectionPublications from '../components/section-publications';
 import SectionProjects from '../components/section-projects';
 import SectionResearch from '../components/section-research';
@@ -22,6 +23,7 @@ const Index = ({ data }) => {
   const experience = get(data, 'site.siteMetadata.experience', false);
   const education = get(data, 'site.siteMetadata.education', false);
   const awards = get(data, 'site.siteMetadata.awards', false);
+  const other = get(data, 'site.siteMetadata.other', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
 
   return (
@@ -32,15 +34,15 @@ const Index = ({ data }) => {
       {education && education.length && (
         <SectionEducation education={education} />
       )}
-      {research && research.length && <SectionResearch research={research} />}
-      {projects && projects.length && <SectionProjects projects={projects} />}
-      {publications && publications.length && (
-        <SectionPublications publications={publications} />
-      )}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
       )}
+      {research && research.length && <SectionResearch research={research} />}
+      {publications && publications.length && (
+        <SectionPublications publications={publications} />
+      )}
       {awards && awards.length && <SectionAwards awards={awards} />}
+      {other && other.length && <SectionOther other={other} />}
       {skills && skills.length && <SectionSkills skills={skills} />}
     </Layout>
   );
@@ -87,6 +89,11 @@ export const pageQuery = graphql`
           link
         }
         awards {
+          name
+          description
+          link
+        }
+        other {
           name
           description
           link
