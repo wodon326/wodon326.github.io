@@ -112,19 +112,19 @@ module.exports = {
       {
         name: 'Robot',
         description:
-          '- 한국전자기술연구원 KETI\n  - LLM/VLM 기반 물류로봇 자율주행 시스템\n  - LiDAR-IMU 기반 SLAM 매핑 및 자율주행 시스템\n- 개인 프로젝트\n  - 강화학습 기반 로봇팔 핀-홀 정밀 삽입 시스템\n  - 강화학습 기반 AMR 물류로봇 자율주행 시스템',
+          '- [black]한국전자기술연구원 KETI[/black]\n  - LLM/VLM 기반 물류로봇 자율주행 시스템\n  - LiDAR-IMU 기반 SLAM 매핑 및 자율주행 시스템\n- [black]개인 프로젝트[/black]\n  - 강화학습 기반 로봇팔 핀-홀 정밀 삽입 시스템\n  - 강화학습 기반 AMR 물류로봇 자율주행 시스템',
         link: '',
       },
       {
         name: '3D Computer Vision',
         description:
-          '- Monocular Depth Estimation Foundation Model\n  - Publication: ICCVw, ICEIC * 2 / 특허: 국내 특허 2건 출원\n- HD한국조선해양 산학 과제\n  - LiDAR 기반 선체 블록 하단부 보강재 간 섹션 국부 변형량 계측 자동화. (2025.10 - 2025.12)\n  - 선체 블록 계측 자동화 및 드론 기반 3D 복원 기술 개발. (2025.01 - 2025.09)\n  - 스테레오 카메라의 이미지 처리 자동화를 위한 알고리즘. (2024.04 - 2024.09)',
+          '- [black]Monocular Depth Estimation Foundation Model[/black]\n  - Publication: ICCVw, ICEIC * 2 / 특허: 국내 특허 2건 출원\n- [black]HD한국조선해양 산학 과제[/black]\n  - LiDAR 기반 선체 블록 하단부 보강재 간 섹션 국부 변형량 계측 자동화. (2025.10 - 2025.12)\n  - 선체 블록 계측 자동화 및 드론 기반 3D 복원 기술 개발. (2025.01 - 2025.09)\n  - 스테레오 카메라의 이미지 처리 자동화를 위한 알고리즘. (2024.04 - 2024.09)',
         link: '',
       },
       {
         name: 'Deep Learning',
         description:
-          '- 탄소중립적 데이터 센터 운영을 위한 LSTM 기반 서버 관리 모델\n  - Publication: IEEE Access, KTSDE, ASK',
+          '- [black]탄소중립적 데이터 센터 운영을 위한 LSTM 기반 서버 관리 모델[/black]\n  - Publication: IEEE Access, KTSDE, ASK',
         link: '',
       },
     ],
