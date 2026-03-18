@@ -18,7 +18,7 @@ module.exports = {
     // phone: `+82-10-7185-8985`,
     portfolioPdf: `/마상균_포트폴리오.pdf`,
     // Content of the About Me section
-    about: `Hello, I am Sanggyun Ma, an M.S. student in the Department of Interdisciplinary Studies of Artificial Intelligence (AI) at DGIST, South Korea, advised by Prof. Sunghoon Im in the DGIST Computer Vision Lab. My research interests lie in computer vision and deep learning, with a focus on 3D reconstruction, foundation model, monocular depth estimation. I received my B.S. in Computer Engineering from Yeungnam University, South Korea, in 2024.`,
+    about: `Hello, I am Sanggyun Ma, currently working at the Intelligent Robotics Research Center at the Korea Electronics Technology Institute (KETI). I received my M.S. in the Department of Interdisciplinary Studies of Artificial Intelligence at DGIST, South Korea, under the supervision of Prof. Sunghoon Im in the DGIST Computer Vision Lab. My research interests lie in computer vision, and physical AI, with a particular focus on 3D reconstruction, monocular depth estimation, robotics, and reinforcement learning.`,
     // Optional: Research interests
     // research: [
     //   {
@@ -172,7 +172,7 @@ module.exports = {
       },
       {
         name: 'Frameworks & Tools',
-        description: 'PyTorch, COLMAP',
+        description: 'PyTorch, ROS2',
       },
       {
         name: 'English',
